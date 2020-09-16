@@ -1,8 +1,6 @@
 # CasADi.jl
 
-| Status | Coverage |
-| :----: | :----: |
-| [![Build Status](https://travis-ci.com/ichatzinikolaidis/CasADi.jl.svg?token=FzSdC6SrVJguwZEzpBbQ&branch=master)](https://travis-ci.com/ichatzinikolaidis/CasADi.jl) | [![codecov](https://codecov.io/gh/ichatzinikolaidis/CasADi.jl/branch/master/graph/badge.svg?token=vdYN5Ok2BB)](https://codecov.io/gh/ichatzinikolaidis/CasADi.jl) |
+This is a fork of the `CasADi.jl` package here: <https://github.com/ichatzinikolaidis/CasADi.jl>
 
 ## Introduction
 
@@ -19,11 +17,15 @@ Please note:
 ## How to install
 
 This is **not** a registered package and there is no plan to register it soon.
-You can easily install it by activating the package manager `]` and running
 
-```julia
-add git@github.com:ichatzinikolaidis/CasADi.jl.git
-```
+There are several steps for installing this package.
+
+1. You first need to have `PyCall.jl` installed (which in turns requires `Conda.jl`).
+2. In the same environment that `Conda.jl` uses (thus `PyCall.jl` uses), install CasADi.  Although this package can install CasADi itself using `Conda.jl` from conda-forge, I find that the conda-forge version of CasADi often causes problems within Conda / Python.  Therefore I would suggest CasADi be installed manually using the official channel, in particular with `pip install casadi`.  I find that this method is more reliable.  Furthermore, I find that using the `base` environment in Conda instead of a dedicated virtual environment for `Conda.jl` works better.  You may want to start Python and test CasADi to make sure that it works well.
+3. Finally, install this package directly from github by activating the package manager `]` and running
+  ```julia
+  add https://github.com/nxtruong/CasADi.jl.git
+  ```
 
 ## Example: Create NLP solver
 
