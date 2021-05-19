@@ -1,7 +1,5 @@
 # CasADi.jl
 
-This is a fork of the `CasADi.jl` package here: <https://github.com/ichatzinikolaidis/CasADi.jl>
-
 ## Introduction
 
 This package is an interface to CasADi, a powerful symbolic framework for automatic differentiation and optimal control.
